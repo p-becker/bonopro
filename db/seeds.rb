@@ -4,4 +4,7 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+if Rails.env.development?
+  organization = Organization.create(name: "Testverein1")
+  Task.create(title: "Test task", description: "Beschreibung", organization: organization)
+end
