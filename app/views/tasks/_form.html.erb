@@ -12,21 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :organization %>
+    <%= form.label :Verein %>
     <%= form.collection_select(:organization_id, Organization.all, :id, :name) %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :Zusammenfassung %>
     <%= form.text_field :title, id: :task_title %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :task_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Info %>
     <%= form.text_area :description, id: :task_description %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Speichern' %>
   </div>
 <% end %>
