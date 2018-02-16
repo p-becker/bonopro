@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :companies
   resources :organizations
   root 'tasks#index'

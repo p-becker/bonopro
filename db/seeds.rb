@@ -8,5 +8,5 @@ if Rails.env.development?
   organization = Organization.create(name: "Testverein1")
   Task.create(title: "Test task", description: "Beschreibung", organization: organization)
   company = Company.create(name: "news aktuell", address: "Mittelweg 144")
-  User.create(first_name: 'Katharina', last_name: 'Heimes', email: 'heimes@newsaktuell.de', company: company)
+  User.create(first_name: 'Katharina', last_name: 'Heimes', email: 'heimes@newsaktuell.de', company: company, password: '123456')
 end
